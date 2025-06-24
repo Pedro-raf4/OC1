@@ -9,3 +9,9 @@
 */
 %let caminho=/opt/sas/Workshop/Git/OC1;
 %let caminho_libs=/opt/sas/Workshop/libraries;
+
+libname sicoob base "&caminho_libs/Sicoob";
+
+data Sicoob.carros;
+	set sashelp.cars;
+run;
